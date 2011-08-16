@@ -1,0 +1,72 @@
+/*
+Theme Name:     Sities
+Theme URI:      http: //minholi.com/blog/
+Description:    Tema do site do Sities 
+Author:         Marcelo Minholi
+Author URI:     http: //minholi.com/blog/
+Template:       twentyeleven
+Version:        0.1.0
+*/
+
+@import url("../twentyeleven/style.css");
+
+body {
+    background: #b6ddc8;
+    overflow-x: hidden;
+}
+
+#page {
+    margin: 0 auto;
+    background: #d8ece0;
+}
+
+#branding {
+    border-top: none;
+}
+
+#site-generator {
+    background: #d1e4d9;
+}
+
+#site-title {
+    background: url("images/logo.png") no-repeat center center;
+    width: 432px;
+    height: 50px;
+}
+
+#site-title span { display: none; }
+
+#site-description { display: none; }
+
+#branding #searchform {
+    top: 2.3em;
+}
+
+input#s {
+    background: url("images/search.png") no-repeat scroll 5px 6px #fff;
+}
+
+#access { 
+    position: absolute;
+    background: url("images/access.png") center no-repeat;
+    width: 2600px;
+    height: 34px;
+    left: -800px;
+    box-shadow: none;
+    margin-bottom: 20px; 
+}
+#access a { color: #fff; line-height: 34px; text-shadow: 1px 1px 0.5px #222; }
+#access div { width: 1000px; margin: auto auto; }
+#access ul { margin: auto 0 auto 75px; }
+#access li:hover > a, #access a:focus {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+}
+
+#main {
+    padding: 3em 0 0;
+}
+
+.entry-header .comments-link a {
+    background: url("images/comment-bubble.png") no-repeat scroll 0 0 #eee;
+}

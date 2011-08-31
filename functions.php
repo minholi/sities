@@ -7,22 +7,50 @@
  * @since Sities 0.2.0
  */
 
-/**
- * Manda o WordPress rodar a sities_setup() quando o 'after_setup_theme' rodar.
- */
-add_action( 'after_setup_theme', 'sities_setup' );
-
-function sities_setup() {
-    // Pega os widgets do Sities.
-    require( dirname( __FILE__ ) . '/inc/widgets.php' );
-}
 
 /**
- * Registra o widget de banner.
+ * Cria o Post Type Palestra
  */
-function sities_widgets_init() {
-	register_widget( 'Sities_Banner_Widget' );
-}
-add_action( 'widgets_init', 'sities_widgets_init' );
+add_action( 'init', 'create_sities_palestra' );
 
+function create_sities_palestra() {
+	register_post_type( 'sities_palestra',
+		array(
+			'labels' => array(
+				'name' => __( 'Palestras' ),
+				'singular_name' => __( 'Palestra' ),
+                'add_new' => __( 'Adicionar Nova' ),
+                'add_new_item' => __( 'Adicionar Nova Palestra' ),
+                'edit_item' => __( 'Editar Palestra' )
+			),
+		'public' => true,
+		'has_archive' => true,
+        'rewrite' => array('slug' => 'palestras', 'with_front' => False),
+        'menu_position' => 5
+		)
+	);
+}
+
+
+/**
+ * Cria o Post Type Palestrante
+ */
+add_action( 'init', 'create_sities_palestrante' );
+
+function create_sities_palestrante() {
+	register_post_type( 'sities_palestrante',
+		array(
+			'labels' => array(
+				'name' => __( 'Palestrantes' ),
+				'singular_name' => __( 'Palestrante' ),
+                'add_new_item' => __( 'Adicionar Novo Palestrante' ),
+                'edit_item' => __( 'Editar Palestrante' )
+			),
+		'public' => true,
+		'has_archive' => true,
+        'rewrite' => array('slug' => 'palestrantes', 'with_front' => False),
+        'menu_position' => 5
+		)
+	);
+}
 ?>

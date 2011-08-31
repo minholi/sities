@@ -50,7 +50,7 @@ function create_sities_palestrante() {
         'has_archive' => true,
         'rewrite' => array('slug' => 'palestrantes', 'with_front' => False),
         'menu_position' => 5
-		)
-	);
+        )
+    );
 }
 ?>

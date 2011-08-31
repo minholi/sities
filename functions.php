@@ -14,21 +14,21 @@
 add_action( 'init', 'create_sities_palestra' );
 
 function create_sities_palestra() {
-	register_post_type( 'sities_palestra',
-		array(
-			'labels' => array(
-				'name' => __( 'Palestras' ),
-				'singular_name' => __( 'Palestra' ),
+    register_post_type( 'sities_palestra',
+        array(
+            'labels' => array(
+                'name' => __( 'Palestras' ),
+                'singular_name' => __( 'Palestra' ),
                 'add_new' => __( 'Adicionar Nova' ),
                 'add_new_item' => __( 'Adicionar Nova Palestra' ),
                 'edit_item' => __( 'Editar Palestra' )
-			),
-		'public' => true,
-		'has_archive' => true,
+            ),
+        'public' => true,
+        'has_archive' => true,
         'rewrite' => array('slug' => 'palestras', 'with_front' => False),
         'menu_position' => 5
-		)
-	);
+        )
+    );
 }
 
 
@@ -38,16 +38,16 @@ function create_sities_palestra() {
 add_action( 'init', 'create_sities_palestrante' );
 
 function create_sities_palestrante() {
-	register_post_type( 'sities_palestrante',
-		array(
-			'labels' => array(
-				'name' => __( 'Palestrantes' ),
-				'singular_name' => __( 'Palestrante' ),
+    register_post_type( 'sities_palestrante',
+        array(
+            'labels' => array(
+                'name' => __( 'Palestrantes' ),
+                'singular_name' => __( 'Palestrante' ),
                 'add_new_item' => __( 'Adicionar Novo Palestrante' ),
                 'edit_item' => __( 'Editar Palestrante' )
-			),
-		'public' => true,
-		'has_archive' => true,
+        ),
+        'public' => true,
+        'has_archive' => true,
         'rewrite' => array('slug' => 'palestrantes', 'with_front' => False),
         'menu_position' => 5
 		)

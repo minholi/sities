@@ -1,6 +1,6 @@
-<?php
+ï»¿<?php
 /**
- * Funções e configurações do Sities
+ * FunÃ§Ãµes e configuraÃ§Ãµes do Sities
  *
  * @package WordPress
  * @subpackage Sities

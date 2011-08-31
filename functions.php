@@ -45,7 +45,7 @@ function create_sities_palestrante() {
                 'singular_name' => __( 'Palestrante' ),
                 'add_new_item' => __( 'Adicionar Novo Palestrante' ),
                 'edit_item' => __( 'Editar Palestrante' )
-        ),
+            ),
         'public' => true,
         'has_archive' => true,
         'rewrite' => array('slug' => 'palestrantes', 'with_front' => False),

@@ -53,4 +53,19 @@ function create_sities_palestrante() {
         )
     );
 }
+
+
+/**
+ * Cria uma ligação entre Palestra e Palestrante
+ */
+function sities_connection_types() {
+    if ( !function_exists( 'p2p_register_connection_type' ) )
+        return;
+
+    p2p_register_connection_type( array( 
+        'from' => 'sities_palestra',
+        'to' => 'sities_palestrante'
+    ) );
+}
+add_action( 'init', 'sities_connection_types', 100 );
 ?>

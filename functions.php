@@ -23,6 +23,7 @@ function create_sities_palestra() {
                 'add_new_item' => __( 'Adicionar Nova Palestra' ),
                 'edit_item' => __( 'Editar Palestra' )
             ),
+            'supports' => array('title', 'excerpt', 'custom-fields'),
             'public' => true,
             'has_archive' => true,
             'rewrite' => array('slug' => 'palestras', 'with_front' => False),
@@ -46,6 +47,7 @@ function create_sities_palestrante() {
                 'add_new_item' => __( 'Adicionar Novo Palestrante' ),
                 'edit_item' => __( 'Editar Palestrante' )
             ),
+            'supports' => array('title', 'excerpt', 'thumbnail'),
             'public' => true,
             'has_archive' => true,
             'rewrite' => array('slug' => 'palestrantes', 'with_front' => False),

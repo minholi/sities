@@ -92,9 +92,6 @@ function create_sities_taxonomies() {
                 'update_item' => __( 'Atualizar Tipo' ),
                 'add_new_item' => __( 'Adicionar Novo Tipo' ),
                 'new_item_name' => __( 'Novo Tipo' ),
-                'separate_items_with_commas' => __( 'Separar tipos com vírgulas' ),
-                'add_or_remove_items' => __( 'Adicionar ou remover tipos' ),
-                'choose_from_most_used' => __( 'Escolher a partir dos tipos mais usados' ),
                 'menu_name' => __( 'Tipos' ),
             ),
         )

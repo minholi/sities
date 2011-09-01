@@ -23,7 +23,6 @@ function create_sities_palestra() {
                 'add_new_item' => __( 'Adicionar Nova Palestra' ),
                 'edit_item' => __( 'Editar Palestra' )
             ),
-            'supports' => array('title', 'excerpt', 'custom-fields'),
             'public' => true,
             'has_archive' => true,
             'rewrite' => array('slug' => 'palestras', 'with_front' => False),
@@ -47,7 +46,7 @@ function create_sities_palestrante() {
                 'add_new_item' => __( 'Adicionar Novo Palestrante' ),
                 'edit_item' => __( 'Editar Palestrante' )
             ),
-            'supports' => array('title', 'excerpt', 'thumbnail'),
+            'supports' => array('title', 'editor', 'thumbnail'),
             'public' => true,
             'has_archive' => true,
             'rewrite' => array('slug' => 'palestrantes', 'with_front' => False),
@@ -99,5 +98,96 @@ function create_sities_taxonomies() {
         )
     );
 }
+
+
+
+/**
+ * Custom fields do Post Type Palestra
+ */
+$palestra_details = 
+    array (
+        "palestra-data"  => array(
+            "name" =>  "palestra-data",
+            "type" =>  "input",
+            "title"  => "Data",
+            "description"  => "Data da realização da palestra. Ex.: 15/10/2011.",
+            "scope"  => array("palestra",)
+        ),
+        "palestra-hora"  => array(
+            "name" =>  "palestra-hora",
+            "type" =>  "input",
+            "title"  => "Hora",
+            "description"  => "Hora da realização da palestra. Ex.: 21:00.",
+            "scope"  => array("palestra",)
+        )    
+    ); 
+
+    
+function generate_palestra_form() {
+    global $post, $palestra_details;
+
+    foreach($palestra_details as $meta_box) {
+        echo '<input type="hidden" name="'.$meta_box['name'].'_noncename"  id="'.$meta_box['name'].'_noncename" value="'.wp_create_nonce(  plugin_basename(__FILE__) ).'" />';
+        echo '<div><span  style="width:200px;  float:left">'.$meta_box['title'].'</span>';
+        if( $meta_box['type'] == "input" )  { 
+            $meta_box_value =  get_post_meta($post->ID, $meta_box['name'], true);
+            if($meta_box_value ==  "")
+                $meta_box_value =  $meta_box['std'];
+            echo'<input  type="text" name="'.$meta_box['name'].'"  value="'.$meta_box_value.'" size="98" /><br />';
+        } elseif ( $meta_box['type'] ==  "select" ) {
+            echo'<select name="'.$meta_box['name'].'">';
+            foreach ($meta_box['options'] as  $option) {
+                echo'<option';
+                if (  get_post_meta($post->ID, $meta_box['name'], true) == $option ) { 
+                    echo '  selected="selected"'; 
+                } elseif ( $option ==  $meta_box['std'] ) { 
+                    echo '  selected="selected"'; 
+                } 
+                echo'>'.  $option .'</option>';
+            }
+            echo'</select>';
+        }
+        echo '</div>';
+        echo '<p style="font-size: 80%; color: #888;"><label for="'.$meta_box['name'].'">'.$meta_box['description'].'</label></p>';
+    }
+}
+
+function save_form_data( $post_id ) {
+    global $post, $palestra_details;
+    
+    foreach($palestra_details as $meta_box) {
+        if ( !wp_verify_nonce( $_POST[$meta_box['name'].'_noncename'], plugin_basename(__FILE__) ) ) {
+            return $post_id;
+        }
+        if ( 'page' ==  $_POST['post_type'] ) {
+            if (  !current_user_can( 'edit_page', $post_id ))
+                return  $post_id;
+        } else {
+            if (  !current_user_can( 'edit_post', $post_id ) )
+                return  $post_id;
+        }
+
+        $data =  $_POST[$meta_box['name']];
+
+        if(get_post_meta($post_id,  $meta_box['name']) == "")
+            add_post_meta($post_id,  $meta_box['name'], $data, true);
+        elseif($data !=  get_post_meta($post_id, $meta_box['name'], true))
+            update_post_meta($post_id,  $meta_box['name'], $data);
+        elseif($data ==  "")
+            delete_post_meta($post_id,  $meta_box['name'], get_post_meta($post_id, $meta_box['name'], true));
+    }
+}
+
+
+function create_meta_box() {
+    global $theme_name,  $palestra_details;
+
+    if (function_exists('add_meta_box')) {
+        add_meta_box( 'my-custom-fields', 'Horário', 'generate_palestra_form', 'sities_palestra', 'normal', 'low' );
+    }
+}
+
+add_action('admin_menu',  'create_meta_box'); add_action('save_post',  'save_form_data');
+
 
 ?>

@@ -100,7 +100,6 @@ function create_sities_taxonomies() {
 }
 
 
-
 /**
  * Custom fields do Post Type Palestra
  */
@@ -187,7 +186,8 @@ function create_meta_box() {
     }
 }
 
-add_action('admin_menu',  'create_meta_box'); add_action('save_post',  'save_form_data');
+# Desabilitado em favor do uso do plugin 'Custom Field Template'
 
+# add_action('admin_menu',  'create_meta_box'); add_action('save_post',  'save_form_data');
 
 ?>

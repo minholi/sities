@@ -5,7 +5,7 @@ Description:    Tema do site do Sities
 Author:         Marcelo Minholi
 Author URI:     http: //minholi.com/blog/
 Template:       twentyeleven
-Version:        0.3.0
+Version:        0.4.0
 */
 
 @import url("../twentyeleven/style.css");
@@ -69,4 +69,48 @@ input#s {
 
 .entry-header .comments-link a {
     background: url("images/comment-bubble.png") no-repeat scroll 0 0 #eee;
+}
+
+#content {
+    width: 84.8%;
+}
+
+.singular.page .hentry { padding: 0; }
+.singular .hentry { padding: 0; }
+
+.coluna { width: 50%; float: left; }
+#colunas { clear: both; }
+
+.item-coluna { display: block; color: #367352; }
+.item-coluna:hover { text-decoration: none; color: #63b689; }
+
+.item-coluna h2 {
+    font-weight: bold;
+    border-bottom: 2px solid gray;
+}
+
+.item-coluna p {
+    font-size: 0.8em;
+    line-height: 1.5em;
+    margin-top: 5px;
+}
+
+#inscricoes {
+    background: url("images/forms.png") no-repeat left;
+    padding: 0 10px 0 138px;
+}
+
+#palestras {
+    background: url("images/talks.png") no-repeat left;
+    padding: 0 10px 0 138px;
+}
+
+#localizacao {
+    background: url("images/locations.png") no-repeat left;
+    padding: 0 10px 0 138px;
+}
+
+#palestrantes {
+    background: url("images/speakers.png") no-repeat left;
+    padding: 0 10px 0 138px;
 }

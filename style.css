@@ -75,6 +75,14 @@ input#s {
     width: 84.8%;
 }
 
+.singular .entry-header, .singular .entry-content, .singular footer.entry-meta, .singular #comments-title {
+    width: 100%;
+}
+
+.singular .entry-meta .edit-link a {
+    margin-left: -112px;
+}
+
 .singular.page .hentry { padding: 0; }
 .singular .hentry { padding: 0; }
 
@@ -93,6 +101,17 @@ input#s {
     font-size: 0.8em;
     line-height: 1.5em;
     margin-top: 5px;
+}
+
+.singular .entry-title {
+    padding: 0;
+    border-bottom: 2px solid gray;
+    color: #444;
+    font-size: 1.8em;
+}
+
+#banner-sities {
+    margin-bottom: 5px;
 }
 
 #inscricoes {
@@ -114,3 +133,9 @@ input#s {
     background: url("images/speakers.png") no-repeat left;
     padding: 0 10px 0 138px;
 }
+
+.wpcf7 {
+    font-size: 0.8em;
+}
+
+.wpcf7 input { padding: 8px; }

@@ -12,8 +12,8 @@ get_header(); ?>
 		<div id="primary">
 			<div id="content" role="main">
 
-                <?php include (ABSPATH . '/wp-content/plugins/featured-content-gallery/gallery.php'); ?>
-
+                <img id="banner-sities" src="<?php bloginfo('stylesheet_directory'); ?>/images/banner-sities.png">
+            
                 <div id="colunas">
                 <div class="coluna" id="coluna1">
                     <a class="item-coluna" id="inscricoes" href="#">
@@ -45,7 +45,11 @@ get_header(); ?>
                     </a>
                 </div>
                 </div>
+                
+                <?php the_post(); ?>
 
+                <?php the_content(); ?>
+                
 			</div><!-- #content -->
 		</div><!-- #primary -->
 

@@ -13,7 +13,7 @@ get_header(); ?>
 			<div id="content" role="main">
 
                 <img id="banner-sities" src="<?php bloginfo('stylesheet_directory'); ?>/images/banner-sities.png">
-            
+
                 <div id="colunas">
                 <div class="coluna" id="coluna1">
                     <a class="item-coluna" id="inscricoes" href="#">
@@ -45,11 +45,11 @@ get_header(); ?>
                     </a>
                 </div>
                 </div>
-                
+
                 <?php the_post(); ?>
 
                 <?php the_content(); ?>
-                
+
 			</div><!-- #content -->
 		</div><!-- #primary -->
 

@@ -63,6 +63,10 @@ input#s {
     color: #fff;
 }
 
+/*
+ * Conteudo
+ */
+
 #main {
     padding: 3em 0 0;
 }
@@ -110,6 +114,10 @@ input#s {
     font-size: 1.8em;
 }
 
+/*
+ * Pagina inicial
+ */
+
 #banner-sities {
     margin-bottom: 5px;
 }
@@ -133,6 +141,62 @@ input#s {
     background: url("images/speakers.png") no-repeat left;
     padding: 0 10px 0 138px;
 }
+
+/*
+ * Palestras
+ */
+.entry-content th {
+    background: #b5d7c2;
+    border: 1px solid #8ec1a3;
+    font-size: 0.9em;
+    padding: 10px;
+    line-height: 1.6em;
+    text-align: center;
+    font-weight: bold;
+    color: #3c6d50;
+}
+
+.entry-content td {
+    border-top: 0;
+    padding: 10px;
+    font-size: 0.8em;
+    background: #cde4d6;
+    border: 1px solid #aed3bc;
+    vertical-align: middle;
+    color: #3c6d50;
+}
+
+.entry-content p {
+    margin-bottom: 0;
+}
+
+.entry-content h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    line-height: 1.2em;
+}
+
+.entry-content table {
+    border-bottom: 0;
+    border-spacing: 3px;
+}
+
+.hora {
+    font-size: 1.2em !important;
+    font-weight: bold;
+    text-align: center;
+}
+
+.dia-palestras {
+    font-size: 1.3em;
+    color: #444 !important;
+    padding-left: 3px;
+    margin-bottom: 0.3em !important;
+}
+
+/*
+ * Formulario de contato
+ */
 
 .wpcf7 {
     font-size: 0.8em;

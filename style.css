@@ -173,7 +173,13 @@ input#s {
 .entry-content h3 {
     font-size: 1.2em;
     font-weight: bold;
+    line-height: 1.8em;
+    margin-top: 10px;
+}
+
+.entry-content table h3 {
     line-height: 1.2em;
+    margin-top: 0;
 }
 
 .entry-content table {

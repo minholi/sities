@@ -16,13 +16,13 @@ get_header(); ?>
 
                 <div id="colunas">
                 <div class="coluna" id="coluna1">
-                    <a class="item-coluna" id="inscricoes" href="#">
+                    <a class="item-coluna" id="inscricoes" href="/inscricoes/">
                         <h2>Inscrições</h2>
                         <p>Se deseja participar do Sities, efetue sua inscrição aqui. A inscrição
                         prévia não tem custo e ao informar seus dados você estará concorrendo a
                         brindes de nossos patrocinadores.</p>
                     </a>
-                    <a class="item-coluna" id="localizacao" href="#">
+                    <a class="item-coluna" id="localizacao" href="/localizacao/">
                         <h2>Localização</h2>
                         <p>O Sities será realizado no campus do IFPR, na rodovia PR-323 próximo ao
                         trevo de acesso de Mariluz (sentido Guaíra). O local conta com amplo
@@ -31,13 +31,13 @@ get_header(); ?>
                 </div>
 
                 <div class="coluna" id="coluna2">
-                    <a class="item-coluna" id="palestras" href="#">
+                    <a class="item-coluna" id="palestras" href="/programacao/">
                         <h2>Programação</h2>
                         <p>Veja aqui as principais atrações do Sities, os horários em que serão
                         ministradas as palestras, mini-cursos e demais atividades. Lembre-se
                         de montar seu programa pessoal.</p>
                     </a>
-                    <a class="item-coluna" id="palestrantes" href="#">
+                    <a class="item-coluna" id="palestrantes" href="/palestrantes/">
                         <h2>Palestrantes</h2>
                         <p>Saiba quem estará ministrando palestras e mini-cursos no Sities.
                         Conheça um pouco do perfil dos palestrantes e veja quem tem o perfil

@@ -68,6 +68,9 @@
 </head>
 
 <body <?php body_class(); ?>>
+<div id="barra-brasil-v3">
+    <span><img alt="Brasil" src="http://reitoria.ifpr.edu.br/wp-content/uploads/2011/08/barra-brasil-v3-verde.gif"></span>
+</div>
 <div id="page" class="hfeed">
 	<header id="branding" role="banner">
 			<hgroup>

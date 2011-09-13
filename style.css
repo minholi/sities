@@ -15,6 +15,17 @@ body {
     overflow-x: hidden;
 }
 
+#barra-brasil-v3 {
+    background: #00500F;
+    padding: 0;
+    clear: both;
+    height: 24px;
+    min-width: 2600px;
+    margin-left: -744px;
+    text-align: center;
+    overflow: hidden;
+}
+
 #page {
     margin: 0 auto;
     background: #ebf8e2;

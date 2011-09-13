@@ -20,11 +20,12 @@ body {
     padding: 0;
     clear: both;
     height: 24px;
-    min-width: 2600px;
-    margin-left: -744px;
     text-align: center;
-    overflow: hidden;
+    margin-left: -40px;
+    margin-right: -40px;
 }
+
+#barra-brasil-v3 img { margin: 0 auto; }
 
 #page {
     margin: 0 auto;

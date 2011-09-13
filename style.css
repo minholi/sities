@@ -112,7 +112,7 @@ input#s {
 .singular .hentry { padding: 0; }
 
 .coluna { width: 50%; float: left; }
-#colunas { clear: both; }
+#colunas { clear: both; margin-top: 80px; }
 
 .item-coluna { display: block; color: #515e48; }
 .item-coluna:hover { text-decoration: none; color: #748667; }

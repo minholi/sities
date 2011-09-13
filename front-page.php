@@ -12,7 +12,10 @@ get_header(); ?>
 		<div id="primary">
 			<div id="content" role="main">
 
-                <img id="banner-sities" src="<?php bloginfo('stylesheet_directory'); ?>/images/banner-sities.png">
+                <div id="sb-slider" class="sb-slider">
+                    <img id="banner-sities" src="<?php bloginfo('stylesheet_directory'); ?>/images/banner-sities.png" title="Prestigie você também!" />
+                </div>
+
 
                 <div id="colunas">
                 <div class="coluna" id="coluna1">
@@ -52,5 +55,29 @@ get_header(); ?>
 
 			</div><!-- #content -->
 		</div><!-- #primary -->
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+		<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.slicebox.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				
+				$('#sb-slider').slicebox({
+					slicesCount			: 8,
+					disperseFactor		: 30,
+					sequentialRotation	: true,
+					sequentialFactor	: 100
+				});
+				
+				if( !Modernizr.csstransforms3d ) {
+					$('#sb-note').show();
+					
+					$('#sb-examples > li:gt(2)').remove();
+					
+					$('body').append(
+						$('script').attr( 'type', 'text/javascript' ).attr( 'src', '<?php bloginfo('stylesheet_directory'); ?>/js/jquery.easing.1.3.js' )
+					);
+				}	
+			});
+		</script>
 
 <?php get_footer(); ?>

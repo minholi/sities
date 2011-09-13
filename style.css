@@ -11,13 +11,13 @@ Version:        0.4.0
 @import url("../twentyeleven/style.css");
 
 body {
-    background: #b6ddc8;
+    background: #e0edd5;
     overflow-x: hidden;
 }
 
 #page {
     margin: 0 auto;
-    background: #d8ece0;
+    background: #ebf8e2;
 }
 
 #branding {
@@ -25,7 +25,7 @@ body {
 }
 
 #site-generator {
-    background: #d1e4d9;
+    background: #dde6d6;
 }
 
 #site-title {
@@ -34,12 +34,21 @@ body {
     height: 50px;
 }
 
+#ifpr-logo img {
+    width: 60px !important;
+    height: 85px !important;
+    position: absolute;
+    right: 80px;
+    top: 10px;
+}
+
 #site-title span { display: none; }
 
 #site-description { display: none; }
 
 #branding #searchform {
-    top: 2.3em;
+    top: 2.5em;
+    right: 11em; 
 }
 
 input#s {
@@ -93,8 +102,8 @@ input#s {
 .coluna { width: 50%; float: left; }
 #colunas { clear: both; }
 
-.item-coluna { display: block; color: #367352; }
-.item-coluna:hover { text-decoration: none; color: #63b689; }
+.item-coluna { display: block; color: #515e48; }
+.item-coluna:hover { text-decoration: none; color: #748667; }
 
 .item-coluna h2 {
     font-weight: bold;
@@ -146,24 +155,24 @@ input#s {
  * Palestras
  */
 .entry-content th {
-    background: #b5d7c2;
-    border: 1px solid #8ec1a3;
+    background: #dbe6d4;
+    border: 1px solid #d0dec6;
     font-size: 0.9em;
     padding: 10px;
     line-height: 1.6em;
     text-align: center;
     font-weight: bold;
-    color: #3c6d50;
+    color: #515e48;
 }
 
 .entry-content td {
     border-top: 0;
     padding: 10px;
     font-size: 0.8em;
-    background: #cde4d6;
-    border: 1px solid #aed3bc;
+    background: #e1eadb;
+    border: 1px solid #d4e1cb;
     vertical-align: middle;
-    color: #3c6d50;
+    color: #515e48;
 }
 
 .entry-content p {

@@ -195,6 +195,10 @@ td ol {
     font-size: 1em;
 }
 
+.entry-content td ul {
+    font-size: 1.0em;
+}
+
 .entry-content h3 {
     font-size: 1.2em;
     font-weight: bold;
@@ -202,7 +206,9 @@ td ol {
     margin-top: 10px;
 }
 
-.entry-content p {
+.entry-content p,
+.entry-content ul,
+.entry-content ol {
     font-size: 0.8em;
 }
 

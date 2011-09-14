@@ -192,6 +192,7 @@ input#s {
 td ul,
 td ol {
     margin-bottom: 0;
+    font-size: 1em;
 }
 
 .entry-content h3 {
@@ -199,6 +200,10 @@ td ol {
     font-weight: bold;
     line-height: 1.8em;
     margin-top: 10px;
+}
+
+.entry-content p {
+    font-size: 0.8em;
 }
 
 .entry-content table h3 {

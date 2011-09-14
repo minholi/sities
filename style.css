@@ -233,3 +233,10 @@ td ol {
 }
 
 .wpcf7 input { padding: 8px; }
+
+/*
+ * Rodape
+ */
+#endereco {
+    font-size: 0.8em;
+}

@@ -105,6 +105,7 @@
             
             <a id="ifpr-logo" href="http://umuarama.ifpr.edu.br"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/ifpr.png" /></a>
             
+            <!-- Ocultando caixa de busca por causa da logo do IFPR
 			<?php
 				// Has the text been hidden?
 				if ( 'blank' == get_header_textcolor() ) :
@@ -117,6 +118,7 @@
 			?>
 				<?php get_search_form(); ?>
 			<?php endif; ?>
+            -->
             
 			<nav id="access" role="navigation">
 				<h3 class="assistive-text"><?php _e( 'Main menu', 'twentyeleven' ); ?></h3>

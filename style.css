@@ -47,11 +47,11 @@ body {
 }
 
 #ifpr-logo img {
-    width: 60px !important;
-    height: 85px !important;
+    width: 203px !important;
+    height: 105px !important;
     position: absolute;
-    right: 80px;
-    top: 10px;
+    right: 60px;
+    top: 0;
 }
 
 #site-title span { display: none; }

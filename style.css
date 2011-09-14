@@ -44,11 +44,12 @@ body {
     background: url("images/logo.png") no-repeat center center;
     width: 432px;
     height: 50px;
+    padding: 42px 0;
 }
 
 #ifpr-logo img {
-    width: 203px !important;
-    height: 105px !important;
+    width: 260px !important;
+    height: 135px !important;
     position: absolute;
     right: 60px;
     top: 0;

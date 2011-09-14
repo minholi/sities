@@ -188,7 +188,9 @@ input#s {
     color: #515e48;
 }
 
-.entry-content td p {
+.entry-content td p,
+td ul,
+td ol {
     margin-bottom: 0;
 }
 
